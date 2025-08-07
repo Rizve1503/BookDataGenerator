@@ -22,6 +22,9 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--white-color);
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--medium-gray);
@@ -29,12 +32,42 @@ header {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
 }
+
+.view-switcher {
+    display: flex;
+    border: 1px solid var(--medium-gray);
+    border-radius: 6px;
+}
+
+.view-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .view-btn:first-child {
+        border-radius: 6px 0 0 6px;
+    }
+
+    .view-btn:last-child {
+        border-radius: 0 6px 6px 0;
+    }
+
+    .view-btn.active {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
 
 main {
     max-width: 1400px;
@@ -95,7 +128,54 @@ input, select, button {
         border-radius: 0 6px 6px 0;
     }
 
-.card-grid-container {
+.view-container {
+    display: none;
+}
+
+    .view-container.active {
+        display: block;
+    }
+
+#table-container {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+thead th {
+    background-color: var(--light-gray);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--dark-gray);
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+    tbody tr:hover {
+        background-color: #f0f2f5;
+        cursor: pointer;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+#card-grid-container.active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -147,26 +227,6 @@ input, select, button {
     flex-grow: 1;
 }
 
-.loader {
-    border: 4px solid var(--medium-gray);
-    border-top: 4px solid var(--primary-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 3rem auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .modal {
     position: fixed;
     z-index: 1000;
@@ -188,8 +248,9 @@ input, select, button {
 
 .modal-content {
     background-color: var(--white-color);
-    max-width: 580px; 
+    max-width: 580px;
     width: 100%;
+    padding: 0;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transform: scale(0.95);
@@ -203,8 +264,8 @@ input, select, button {
 
 .close-btn {
     position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
+    top: 0.75rem;
+    right: 1rem;
     font-size: 1.8rem;
     color: #adb5bd;
     cursor: pointer;
@@ -223,8 +284,8 @@ input, select, button {
 }
 
 .modal-cover-wrapper {
-    flex-shrink: 0; 
-    width: 130px; 
+    flex-shrink: 0;
+    width: 130px;
     margin-right: 1.5rem;
 }
 

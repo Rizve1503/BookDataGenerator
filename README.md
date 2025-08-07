@@ -85,7 +85,10 @@ seed	integer	The seed value for the random number generator to ensure reproducib
 page	integer	The page number for the data batch. Used for infinite scroll. Page 0 returns 20 items; subsequent pages return 10.	0
 likes	double	The average number of likes per book. A value of 2.7 means 2 likes guaranteed, with a 70% chance of a third.	1.0
 reviews	double	The average number of reviews per book.	1.0
-Example Request ```
+```
+
+
+Example Request
 ```Generated code
 GET https://localhost:7236/api/books?locale=de&seed=123&page=1&likes=3.5
 ```

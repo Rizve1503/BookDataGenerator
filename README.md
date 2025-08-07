@@ -3,9 +3,10 @@
 This is a .NET 8 web application designed to serve as a testing tool by generating realistic, localized fake book data. The application provides a clean, modern user interface for controlling data generation parameters and viewing the results in a responsive, card-based layout with infinite scroll.
 
 The primary purpose of this project is to demonstrate a full-stack development capability, including a stateless back-end API, a dynamic front-end UI, and the integration of third-party libraries to achieve complex, deterministic data generation.
+
+![Screenshot_7-8-2025_124825_localhost](https://github.com/user-attachments/assets/5633ff77-bee1-432f-bdd3-bef9c3c1ef4a)
 ![Screenshot_7-8-2025_124910_localhost](https://github.com/user-attachments/assets/8df5de34-a3fa-440e-aeff-8444250d0bf2)
 ![Screenshot_7-8-2025_124844_localhost](https://github.com/user-attachments/assets/20711bf1-7467-489a-ae8a-faa36a41411e)
-![Screenshot_7-8-2025_124825_localhost](https://github.com/user-attachments/assets/5633ff77-bee1-432f-bdd3-bef9c3c1ef4a)
 
 
 ---
@@ -50,7 +51,7 @@ To get this project running locally, you will need the [.NET 8 SDK](https://dotn
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/BookDataGenerator-Task5.git
+git clone https://github.com/Rizve1503/BookDataGenerato
 ```
 ### 2. Navigate to the Project Directory
 

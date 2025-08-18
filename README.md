@@ -4,6 +4,12 @@ This is a .NET 8 web application designed to serve as a testing tool by generati
 
 The primary purpose of this project is to demonstrate a full-stack development capability, including a stateless back-end API, a dynamic front-end UI, and the intelligent implementation of project requirements and design constraints.
 
+## Live Demo
+https://youtu.be/AX4LfnCRIoQ
+
+## Link to Deployed Project:
+http://mybookgenerator.somee.com
+
 ### Final Application Views
 ![Screenshot_7-8-2025_163950_localhost](https://github.com/user-attachments/assets/26c7e810-9dfa-4100-86b4-6389647ea1b5)
 
